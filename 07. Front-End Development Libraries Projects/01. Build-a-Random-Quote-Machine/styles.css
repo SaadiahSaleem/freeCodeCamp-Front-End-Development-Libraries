@@ -1,0 +1,316 @@
+/* =========================================
+   GLOBAL
+========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+
+  font-family: "Segoe UI", Arial, sans-serif;
+
+  /* Original vibrant purple + teal background */
+  background:
+    radial-gradient(
+      circle at 10% 20%,
+      #ff6bcb 0%,
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 90% 80%,
+      #00f5d4 0%,
+      transparent 25%
+    ),
+    linear-gradient(
+      135deg,
+      #5f2c82,
+      #49a09d
+    );
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+
+/* =========================================
+   QUOTE BOX
+========================================= */
+
+#quote-box {
+  width: min(90%, 650px);
+
+  padding: 55px 50px;
+
+  background: rgba(255, 255, 255, 0.94);
+
+  border-radius: 28px;
+
+  text-align: center;
+
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.25),
+    0 5px 20px rgba(0, 0, 0, 0.12);
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* =========================================
+   QUOTE TEXT
+========================================= */
+
+#text {
+  position: relative;
+
+  color: #3b1b5a;
+
+  /*
+    Elegant serif font for the quote.
+    Georgia is available on almost every system.
+  */
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+
+  font-weight: 600;
+
+  font-style: italic;
+
+  line-height: 1.5;
+
+  letter-spacing: 0.2px;
+
+  margin-bottom: 28px;
+
+  word-wrap: break-word;
+}
+
+
+/* Large decorative quotation mark */
+
+#text::before {
+  content: "“";
+
+  display: inline-block;
+
+  color: #ff4ecd;
+
+  font-family: Georgia, serif;
+
+  font-size: 5rem;
+
+  font-weight: 900;
+
+  font-style: normal;
+
+  line-height: 0;
+
+  vertical-align: -32px;
+
+  margin-right: 8px;
+}
+
+
+/* =========================================
+   AUTHOR
+========================================= */
+
+#author {
+  color: #7653a6;
+
+  font-family: "Segoe UI", Arial, sans-serif;
+
+  font-size: 1.05rem;
+
+  font-weight: 600;
+
+  letter-spacing: 1px;
+
+  text-align: right;
+
+  margin-bottom: 38px;
+}
+
+#author::before {
+  content: "— ";
+  color: #ff4ecd;
+}
+
+
+/* =========================================
+   BUTTON AREA
+========================================= */
+
+#new-quote,
+#tweet-quote {
+  display: inline-block;
+
+  padding: 12px 24px;
+
+  border-radius: 50px;
+
+  font-family: "Segoe UI", Arial, sans-serif;
+
+  font-size: 0.95rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.3px;
+
+  white-space: nowrap;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+/* =========================================
+   NEW QUOTE BUTTON
+========================================= */
+
+#new-quote {
+  border: none;
+
+  background: linear-gradient(
+    135deg,
+    #ff4ecd,
+    #8e44ad
+  );
+
+  color: white;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 20px rgba(255, 78, 205, 0.35);
+}
+
+#new-quote:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 12px 28px rgba(255, 78, 205, 0.5);
+}
+
+#new-quote:active {
+  transform: translateY(0);
+}
+
+
+/* =========================================
+   TWEET BUTTON
+========================================= */
+
+#tweet-quote {
+  margin-left: 10px;
+
+  background: linear-gradient(
+    135deg,
+    #00c6ff,
+    #0072ff
+  );
+
+  color: white;
+
+  text-decoration: none;
+
+  box-shadow:
+    0 8px 20px rgba(0, 114, 255, 0.3);
+}
+
+#tweet-quote:hover {
+  color: white;
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 12px 28px rgba(0, 114, 255, 0.45);
+}
+
+#tweet-quote:active {
+  transform: translateY(0);
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 576px) {
+
+  body {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  #quote-box {
+    width: 92%;
+
+    padding: 40px 25px;
+
+    border-radius: 22px;
+  }
+
+  #text {
+    font-size: 1.55rem;
+
+    line-height: 1.45;
+  }
+
+  #text::before {
+    font-size: 4rem;
+  }
+
+  #author {
+    font-size: 0.95rem;
+
+    margin-bottom: 28px;
+  }
+
+  #new-quote,
+  #tweet-quote {
+    padding: 10px 17px;
+
+    font-size: 0.85rem;
+  }
+
+  #tweet-quote {
+    margin-left: 5px;
+  }
+}
+
+
+/* =========================================
+   VERY SMALL SCREENS
+========================================= */
+
+@media (max-width: 380px) {
+
+  #quote-box {
+    padding: 30px 18px;
+  }
+
+  #new-quote,
+  #tweet-quote {
+    display: block;
+
+    width: 100%;
+
+    margin: 8px 0;
+  }
+}
