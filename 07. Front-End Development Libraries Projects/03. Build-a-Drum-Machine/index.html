@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DrumLab</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<main id="drum-machine">
+
+    <div class="machine">
+
+        <header>
+            <div>
+                <span class="eyebrow">LIVE AUDIO</span>
+                <h1>DRUM<span>LAB</span></h1>
+            </div>
+
+            <div class="status">
+                <span class="status-dot"></span>
+                READY
+            </div>
+        </header>
+
+        <div id="display">READY</div>
+
+        <div class="pads">
+
+            <button class="drum-pad" id="heater-1">
+                Q
+                <audio
+                        class="clip"
+                        id="Q"
+                        src="https://cdn.freecodecamp.org/testable-projects-fcc/audio/Heater-1.mp3">
+                </audio>
+            </button>
+
+            <button class="drum-pad" id="heater-2">
+                W
+                <audio
+                        class="clip"
+                        id="W"
+                        src="https://cdn.freecodecamp.org/testable-projects-fcc/audio/Heater-2.mp3">
+                </audio>
+            </button>
+
+            <button class="drum-pad" id="heater-3">
+                E
+                <audio
+                        class="clip"
+                        id="E"
+                        src="https://cdn.freecodecamp.org/testable-projects-fcc/audio/Heater-3.mp3">
+                </audio>
+            </button>
+
+            <button class="drum-pad" id="heater-4">
+                A
+                <audio
+                        class="clip"
+                        id="A"
+                        src="https://cdn.freecodecamp.org/testable-projects-fcc/audio/Heater-4_1.mp3">
+                </audio>
+            </button>
+
+            <button class="drum-pad" id="clap">
+                S
+                <audio
+                        class="clip"
+                        id="S"
+                        src="https://cdn.freecodecamp.org/testable-projects-fcc/audio/Heater-6.mp3">
+                </audio>
+            </button>
+
+            <button class="drum-pad" id="open-hh">
+                D
+                <audio
+                        class="clip"
+                        id="D"
+                        src="https://cdn.freecodecamp.org/testable-projects-fcc/audio/Dsc_Oh.mp3">
+                </audio>
+            </button>
+
+            <button class="drum-pad" id="kick-n-hat">
+                Z
+                <audio
+                        class="clip"
+                        id="Z"
+                        src="https://cdn.freecodecamp.org/testable-projects-fcc/audio/Kick_n_Hat.mp3">
+                </audio>
+            </button>
+
+            <button class="drum-pad" id="kick">
+                X
+                <audio
+                        class="clip"
+                        id="X"
+                        src="https://cdn.freecodecamp.org/testable-projects-fcc/audio/RP4_KICK_1.mp3">
+                </audio>
+            </button>
+
+            <button class="drum-pad" id="closed-hh">
+                C
+                <audio
+                        class="clip"
+                        id="C"
+                        src="https://cdn.freecodecamp.org/testable-projects-fcc/audio/Cev_H2.mp3">
+                </audio>
+            </button>
+
+        </div>
+
+        <footer>
+            <span>PRESS A PAD</span>
+            <span>Q W E / A S D / Z X C</span>
+        </footer>
+
+    </div>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
