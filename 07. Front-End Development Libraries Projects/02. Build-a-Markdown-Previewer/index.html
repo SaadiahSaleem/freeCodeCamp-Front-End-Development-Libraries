@@ -6,7 +6,7 @@
 
     <title>Markdown Previewer</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 
     <!-- React 17 -->
     <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
@@ -14,6 +14,9 @@
 
     <!-- Marked -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <!-- Babel - required for JSX -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
     <!-- FreeCodeCamp Test Suite -->
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
@@ -32,6 +35,8 @@
     Built with React and Marked
 </footer>
 
-<script src="script.js"></script>
+<!-- IMPORTANT: type="text/babel" -->
+<script type="text/babel" src="script.js"></script>
+
 </body>
 </html>
